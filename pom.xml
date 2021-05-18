@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.codingcalendar</groupId>
 	<artifactId>coding_calendar_api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>coding_calendar_api</name>
 	<description>API Service for the codingclendar_backend</description>
 	<properties>
