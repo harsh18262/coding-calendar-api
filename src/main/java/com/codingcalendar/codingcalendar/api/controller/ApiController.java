@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.ResponseEntity.BodyBuilder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.codingcalendar.codingcalendar.api.Entities.Contest;
@@ -29,6 +30,13 @@ public class ApiController {
 			return  ResponseEntity.ok(apiservices.getAllcontests());
 		}
 		
+		@GetMapping("/contests")
+		public Iterable<Contest> getby_platform_and_phase(@RequestParam(name="platform",required = false) String Platform,@RequestParam(name="phase",required = false) String Phase) 
+		{
+			
+			return apiservices.getby_platform_and_phase(Platform, Phase);
+			
+		}
 		@GetMapping("/error")
 		public BodyBuilder error()
 		{
